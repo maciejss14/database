@@ -1,0 +1,42 @@
+-- DANE KLIENTOW 
+
+-- create database FirstClassBus;
+drop table if exists klienci;
+create table klienci (
+IDKlienta serial primary key,
+Imie varchar(25),
+Nazwisko varchar(50)
+);
+insert into klienci (imie, nazwisko) values ('Tomasz', 'Grzechotnik');
+insert into klienci (imie, nazwisko) values ('Adam', 'Wolek');
+insert into klienci (imie, nazwisko) values ('Joanna', 'Koch');
+
+-- SPECYFIKACJA SAMOCHODOW
+
+drop table if exists auta;
+
+create table auta (
+IDAuta serial primary key not null,
+Marka varchar(25) not null,
+Model varchar(50),
+Rok_produkcji int(4),
+Przebieg_km int,
+il_miejsc int(2),
+nr_rejestr varchar(15),
+Opis varchar(255)
+);
+insert into auta (marka, model, rok_produkcji, il_miejsc, nr_rejestr, opis) values ('Ford', 'Transit', 2017, 16, 'WZ1580N', 'czarny');
+insert into auta (marka, model, rok_produkcji, il_miejsc, nr_rejestr, opis) values ('Ford', 'Transit', 2016, 9, 'WZ3684N', 'srebrny');
+insert into auta (marka, model, rok_produkcji, il_miejsc, nr_rejestr, opis) values ('Ford', 'Transit', 2017, 9, 'OP1901G', 'grafit' );
+insert into auta (marka, model, rok_produkcji, il_miejsc, nr_rejestr, opis) values ('Mercedes', 'Sprinter', 2012, 9, 'WT36050', 'niebieski');
+insert into auta (marka, model, rok_produkcji, il_miejsc, nr_rejestr, opis) values ('OTOCAR', 'nieznany', 2012, 9, 'nieznany', 'niebieski');
+
+
+create table wypozyczenia (
+	IDwypozyczenia serial primary key,
+    IDklienta 
+    IDauta 
+    data_wypozyczenia
+	
+
+)
